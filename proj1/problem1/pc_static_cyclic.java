@@ -1,26 +1,36 @@
-class pc_static_cyclic implements Runnable { //thread to check prime numbers with static block method
-    private int[] chk_num;
-    public pc_static_cyclic(int[] chk_num) {
-        this.chk_num = chk_num;
+import java.util.ArrayList;
+
+//public class pc_static_cyclic implements Runnable { //thread to check prime numbers with static block method
+//    private int[] chk_nums;
+//    public pc_static_cyclic(int[] chk_nums) {
+//        this.chk_nums = chk_nums;
+//    }
+//    @Override
+//    public void run() {
+//        for (int i : chk_nums) {
+//            if(Cnt.isPrime(i)) {
+//                synchronized (main.static_cyclic_cnt) {
+//                    main.static_cyclic_cnt.inc();
+//                }
+//            }
+//        }
+//    }
+//}
+
+
+public class pc_static_cyclic implements Runnable { //thread to check prime numbers with static block method
+    private ArrayList<Integer> chk_nums;
+    public pc_static_cyclic(ArrayList<Integer> chk_nums) {
+        this.chk_nums = chk_nums;
     }
     @Override
     public void run() {
-        for (int i : chk_num) {
-            if(main.static_cyclic_cnt.isPrime(i)) {
+        for (int i : chk_nums) {
+            if(Cnt.isPrime(i)) {
                 synchronized (main.static_cyclic_cnt) {
                     main.static_cyclic_cnt.inc();
                 }
             }
         }
-//        while(start_pnt < main.NUM_END) {
-//            for(int i = 0; i < main.TASK_SIZE; i++) {
-//                if(pc_static_block.isPrime(start_pnt + i)) {
-//                    synchronized (main.static_cyclic_cnt) {
-//                        main.static_cyclic_cnt.inc();
-//                    }
-//                }
-//            }
-//            start_pnt += main.TASK_SIZE * main.NUM_THREADS;
-//        }
     }
 }

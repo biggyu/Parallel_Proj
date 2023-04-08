@@ -1,4 +1,4 @@
-class Cnt { //class to hold sum of prime #
+public class Cnt { //class to hold sum of prime #
     private int cnt = 0;
     public void inc() {
         this.cnt++;

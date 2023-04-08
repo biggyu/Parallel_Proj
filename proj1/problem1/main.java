@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.stream.Stream;
 public class main {
     public static Cnt static_block_cnt = new Cnt();
@@ -47,22 +48,71 @@ public class main {
         for(int k : thread_nums) { //pc_static_cyclic method
             NUM_THREADS = k;
             static_cyclic_cnt.setCnt(0);
-            int[][] chk_nums = new int[NUM_THREADS][(int)NUM_END / (NUM_THREADS * TASK_SIZE) + NUM_END % (NUM_THREADS * TASK_SIZE)];
-//            for(int i = 0; i < NUM_END; i++) {
-//                chk_nums[(i / TASK_SIZE) % (TASK_SIZE * NUM_THREADS)][] = i;
-//            }
 
+//            int[][] chk_nums = new int[NUM_THREADS][];
+//            int leftover = (((int)NUM_END / NUM_THREADS % 10) * NUM_THREADS + NUM_END % NUM_THREADS) / 10;
+//            for(int i = 0; i < leftover; i++) {
+//                chk_nums[i] = new int[(int)NUM_END / NUM_THREADS / 10 * 10 + 10];
+//            }
+//            for(int i = leftover; i < NUM_THREADS; i++) {
+//                chk_nums[i] = new int[(int)NUM_END / NUM_THREADS / 10 * 10];
+//            }
+//
+//            int num = 0;
+//            boolean chk = false;
+//            while(true) {
+//                for(int i = 0; i < NUM_THREADS; i++) {
+//                    for(int j = 0; j < TASK_SIZE; j++) {
+//                        chk_nums[i][j] = num + TASK_SIZE * i + j;
+//                    }
+//                    if(num + TASK_SIZE * (i + 1) == NUM_END) {
+//                        chk = true;
+//                        break;
+//                    }
+//                }
+//                if (chk) break;
+//                num += TASK_SIZE * NUM_THREADS;
+//            }
 //            long startTime = System.currentTimeMillis();
-////            pc_static_cyclic[] cyclics = new pc_static_cyclic[NUM_THREADS];
-//            for (int i = 0; i < NUM_THREADS; i++) {
-//                pc_static_cyclic cyclics = new pc_static_cyclic((i * TASK_SIZE));
-//                cyclics.run();
-////                cyclics[i] = new pc_static_cyclic((i * TASK_SIZE));
-////                cyclics[i % NUM_THREADS].run();
+//            for(int[] ar : chk_nums) {
+//                pc_static_cyclic cyclic = new pc_static_cyclic(ar);
+//                cyclic.run();
 //            }
 //            long endTime = System.currentTimeMillis();
-//            System.out.println(NUM_THREADS + "threads took execution time of " + (endTime - startTime) + "ms");
-//            System.out.println("1..." + NUM_END + " prime# counter=" + static_cyclic_cnt.getCnt());
+
+
+
+
+            ArrayList<Integer>[] chk_nums = new ArrayList[NUM_THREADS];
+            for(int i = 0; i < NUM_THREADS; i++) {
+                chk_nums[i] = new ArrayList<>();
+            }
+            int num = 0;
+            boolean chk = false;
+            while(true) {
+                for(int i = 0; i < NUM_THREADS; i++) {
+                    for(int j = 0; j < TASK_SIZE; j++) {
+                        chk_nums[i].add(num + TASK_SIZE * i + j);
+                    }
+                    if(num + TASK_SIZE * (i + 1) == NUM_END) {
+                        chk = true;
+                        break;
+                    }
+                }
+                if (chk) break;
+                num += TASK_SIZE * NUM_THREADS;
+            }
+
+            long startTime = System.currentTimeMillis();
+            for (ArrayList<Integer> ar : chk_nums) {
+                pc_static_cyclic cyclics = new pc_static_cyclic(ar);
+                cyclics.run();
+            }
+            long endTime = System.currentTimeMillis();
+
+
+            System.out.println(NUM_THREADS + "threads took execution time of " + (endTime - startTime) + "ms");
+            System.out.println("1..." + NUM_END + " prime# counter=" + static_cyclic_cnt.getCnt());
         }
 
 //        System.out.println("Dynamic Method");

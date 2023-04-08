@@ -1,4 +1,4 @@
-class pc_dynamic implements Runnable { //thread to check prime numbers with static block method
+public class pc_dynamic implements Runnable { //thread to check prime numbers with static block method
     private int start_pnt;
     public pc_dynamic(int start_pnt) {
         this.start_pnt = start_pnt;
@@ -7,8 +7,12 @@ class pc_dynamic implements Runnable { //thread to check prime numbers with stat
     public void run() {
         while(start_pnt < main.NUM_END) {
             for(int i = 0; i < main.TASK_SIZE; i++) {
-                if(main.dynamic_cnt.isPrime(start_pnt + i)) {
 //                if(isPrime(start_pnt + i)) {
+//                    synchronized (main.dynamic_cnt) {
+//                        main.dynamic_cnt.inc();
+//                    }
+//                }
+                if(Cnt.isPrime(start_pnt + i)) {
                     synchronized (main.dynamic_cnt) {
                         main.dynamic_cnt.inc();
                     }
