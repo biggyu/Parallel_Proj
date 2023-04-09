@@ -13,8 +13,8 @@ public class pc_static_block implements Runnable { //thread to check prime numbe
 //                }
 //            }
             if (Cnt.isPrime(i)) {
-                synchronized (main.static_block_cnt) {
-                    main.static_block_cnt.inc();
+                synchronized (prob1_main.static_block_cnt) {
+                    prob1_main.static_block_cnt.inc();
                 }
             }
         }

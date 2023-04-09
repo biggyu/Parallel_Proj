@@ -5,20 +5,20 @@ public class pc_dynamic implements Runnable { //thread to check prime numbers wi
     }
     @Override
     public void run() {
-        while(start_pnt < main.NUM_END) {
-            for(int i = 0; i < main.TASK_SIZE; i++) {
+        while(start_pnt < prob1_main.NUM_END) {
+            for(int i = 0; i < prob1_main.TASK_SIZE; i++) {
 //                if(isPrime(start_pnt + i)) {
 //                    synchronized (main.dynamic_cnt) {
 //                        main.dynamic_cnt.inc();
 //                    }
 //                }
                 if(Cnt.isPrime(start_pnt + i)) {
-                    synchronized (main.dynamic_cnt) {
-                        main.dynamic_cnt.inc();
+                    synchronized (prob1_main.dynamic_cnt) {
+                        prob1_main.dynamic_cnt.inc();
                     }
                 }
             }
-            start_pnt += main.TASK_SIZE * main.NUM_THREADS;
+            start_pnt += prob1_main.TASK_SIZE * prob1_main.NUM_THREADS;
         }
     }
 //    public static boolean isPrime(int x) {

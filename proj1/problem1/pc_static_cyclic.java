@@ -27,8 +27,8 @@ public class pc_static_cyclic implements Runnable { //thread to check prime numb
     public void run() {
         for (int i : chk_nums) {
             if(Cnt.isPrime(i)) {
-                synchronized (main.static_cyclic_cnt) {
-                    main.static_cyclic_cnt.inc();
+                synchronized (prob1_main.static_cyclic_cnt) {
+                    prob1_main.static_cyclic_cnt.inc();
                 }
             }
         }
