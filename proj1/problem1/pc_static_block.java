@@ -7,11 +7,6 @@ public class pc_static_block implements Runnable { //thread to check prime numbe
     @Override
     public void run() {
         for(int i = this.start_pnt; i < this.start_pnt + this.block_size; i++) {
-//            if (isPrime(i)) {
-//                synchronized (main.static_block_cnt) {
-//                    main.static_block_cnt.inc();
-//                }
-//            }
             if (Cnt.isPrime(i)) {
                 synchronized (prob1_main.static_block_cnt) {
                     prob1_main.static_block_cnt.inc();
@@ -19,11 +14,4 @@ public class pc_static_block implements Runnable { //thread to check prime numbe
             }
         }
     }
-//    public static boolean isPrime(int x) {
-//        if (x <= 1) return false;
-//        for (int i = 2; i <= (int)Math.sqrt(x); i++) { // integers that exceed sqrt(x) should have its pair below sqrt(x)
-//            if (x % i == 0) return false;
-//        }
-//        return true;
-//    }
 }
