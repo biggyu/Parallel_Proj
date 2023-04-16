@@ -8,10 +8,16 @@ public class prob2_main {
         );
         int[] thread_nums = Stream.of(reader.readLine().split(",")).mapToInt(Integer::parseInt).toArray();
         reader.close();
-
         reader = new BufferedReader(
-                new FileReader("mat1000.txt")
+                new FileReader("mat500.txt")
         );
+
+        File f = new File("prob2_results.txt");
+        if(!f.exists()) {
+            f.createNewFile();
+        }
+        BufferedWriter writer = new BufferedWriter(new FileWriter(f));
+
         int[][] mat1 = new int[Integer.parseInt(reader.readLine().split(" ")[0])][]; //transfer txt to matrix1
         for(int i = 0; i < mat1.length; i++) {
             mat1[i] =  Stream.of(reader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
@@ -54,7 +60,8 @@ public class prob2_main {
                     blocks[j] = new mm_static_block(submat1, submat2);
                     blocks[j].run();
                     long endTime = System.currentTimeMillis();
-                    System.out.print(endTime - startTime + "ms "); //thread execution time
+//                    System.out.print(endTime - startTime + "ms "); //thread execution time
+                    writer.write(endTime - startTime + "ms ");
                     totalTime += endTime - startTime;
                     totalSum += matSum(blocks[j].getMatMul());
 //                    //matrix multiplication is deactivated since it's not needed
@@ -66,13 +73,17 @@ public class prob2_main {
 //                    }
                     y_pnt += submat_size[j]; // move y_pnt
                 }
-                System.out.println();
+//                System.out.println();
+                writer.write("\n");
                 x_pnt += submat_size[i]; // move x_pnt
             }
-            System.out.println(n + "threads took execution time of " + totalTime + "ms");
-            System.out.println("matrix size " + mat1.length + ", " + mat1[0].length + " multiplication sum " + totalSum);
+            System.out.println(n + " thread");
+//            System.out.println("matrix size " + mat1.length + ", " + mat1[0].length + " multiplication sum " + totalSum + "\n");
+            writer.write(n + "threads took execution time of " + totalTime + "ms\n");
+            writer.write("matrix size " + mat1.length + ", " + mat1[0].length + " multiplication sum " + totalSum + "\n\n");
         }
-        System.out.println(matSum(MatmultD.multMatrix(mat1, mat2))); // result of matrix_multiplication w/o parallel prg
+//        System.out.println(matSum(MatmultD.multMatrix(mat1, mat2))); // result of matrix_multiplication w/o parallel prg
+        writer.close();
     }
     public static int matSum(int mat[][]) {
         int sum = 0;

@@ -1,0 +1,135 @@
+137ms 
+1threads took execution time of 137ms
+matrix size 500, 500 multiplication sum 125231132
+
+31ms 31ms 
+32ms 32ms 
+2threads took execution time of 126ms
+matrix size 500, 500 multiplication sum 125231132
+
+7ms 8ms 7ms 7ms 
+7ms 8ms 7ms 8ms 
+7ms 7ms 8ms 7ms 
+7ms 8ms 7ms 7ms 
+4threads took execution time of 117ms
+matrix size 500, 500 multiplication sum 125231132
+
+3ms 3ms 3ms 3ms 3ms 3ms 
+3ms 3ms 3ms 3ms 3ms 3ms 
+3ms 3ms 3ms 3ms 3ms 3ms 
+3ms 3ms 3ms 3ms 3ms 3ms 
+3ms 3ms 3ms 3ms 3ms 3ms 
+3ms 3ms 3ms 3ms 4ms 3ms 
+6threads took execution time of 109ms
+matrix size 500, 500 multiplication sum 125231132
+
+2ms 1ms 1ms 2ms 2ms 1ms 2ms 2ms 
+1ms 2ms 2ms 1ms 1ms 2ms 1ms 1ms 
+2ms 2ms 1ms 2ms 2ms 1ms 2ms 2ms 
+1ms 2ms 2ms 2ms 1ms 2ms 2ms 1ms 
+2ms 2ms 2ms 1ms 2ms 2ms 1ms 2ms 
+2ms 1ms 2ms 2ms 1ms 2ms 2ms 1ms 
+2ms 2ms 2ms 1ms 2ms 2ms 1ms 2ms 
+2ms 1ms 2ms 2ms 1ms 2ms 2ms 1ms 
+8threads took execution time of 105ms
+matrix size 500, 500 multiplication sum 125231132
+
+2ms 1ms 1ms 1ms 1ms 1ms 1ms 2ms 1ms 1ms 
+1ms 1ms 1ms 1ms 2ms 1ms 1ms 1ms 1ms 1ms 
+1ms 1ms 2ms 1ms 1ms 1ms 1ms 1ms 1ms 1ms 
+2ms 1ms 1ms 1ms 1ms 1ms 1ms 1ms 1ms 1ms 
+1ms 1ms 1ms 1ms 2ms 1ms 1ms 1ms 1ms 1ms 
+1ms 2ms 1ms 1ms 1ms 1ms 1ms 1ms 2ms 1ms 
+1ms 1ms 1ms 1ms 1ms 2ms 1ms 1ms 1ms 1ms 
+1ms 1ms 2ms 1ms 1ms 1ms 1ms 1ms 2ms 1ms 
+1ms 1ms 1ms 1ms 1ms 1ms 2ms 1ms 1ms 1ms 
+1ms 1ms 1ms 1ms 1ms 1ms 1ms 1ms 1ms 1ms 
+10threads took execution time of 112ms
+matrix size 500, 500 multiplication sum 125231132
+
+1ms 1ms 1ms 1ms 0ms 1ms 1ms 1ms 1ms 0ms 1ms 1ms 
+1ms 1ms 1ms 0ms 1ms 1ms 1ms 1ms 0ms 1ms 1ms 1ms 
+1ms 0ms 1ms 1ms 1ms 1ms 0ms 1ms 1ms 1ms 1ms 0ms 
+0ms 1ms 1ms 1ms 1ms 0ms 1ms 1ms 1ms 1ms 0ms 1ms 
+1ms 1ms 1ms 0ms 1ms 1ms 1ms 1ms 1ms 0ms 1ms 1ms 
+1ms 1ms 0ms 1ms 1ms 1ms 1ms 0ms 1ms 1ms 1ms 1ms 
+0ms 1ms 1ms 1ms 1ms 0ms 0ms 1ms 1ms 1ms 1ms 0ms 
+1ms 1ms 1ms 1ms 0ms 1ms 1ms 1ms 1ms 0ms 1ms 1ms 
+1ms 1ms 0ms 1ms 1ms 1ms 1ms 0ms 1ms 1ms 1ms 1ms 
+0ms 1ms 1ms 1ms 1ms 0ms 1ms 1ms 1ms 0ms 1ms 1ms 
+1ms 0ms 0ms 1ms 1ms 1ms 1ms 0ms 1ms 1ms 1ms 0ms 
+1ms 1ms 1ms 1ms 0ms 1ms 1ms 1ms 1ms 1ms 0ms 1ms 
+12threads took execution time of 113ms
+matrix size 500, 500 multiplication sum 125231132
+
+1ms 1ms 0ms 1ms 0ms 0ms 1ms 0ms 1ms 1ms 0ms 1ms 0ms 1ms 
+1ms 0ms 1ms 1ms 0ms 1ms 0ms 1ms 1ms 0ms 1ms 1ms 0ms 1ms 
+0ms 1ms 1ms 0ms 1ms 1ms 0ms 1ms 0ms 1ms 1ms 0ms 1ms 0ms 
+0ms 1ms 0ms 1ms 1ms 0ms 1ms 1ms 0ms 1ms 0ms 1ms 1ms 0ms 
+1ms 0ms 1ms 1ms 0ms 1ms 0ms 0ms 1ms 0ms 1ms 1ms 0ms 1ms 
+0ms 1ms 1ms 0ms 1ms 0ms 1ms 1ms 0ms 1ms 0ms 1ms 1ms 0ms 
+1ms 0ms 1ms 1ms 0ms 1ms 0ms 0ms 1ms 0ms 1ms 1ms 0ms 1ms 
+0ms 1ms 1ms 0ms 1ms 1ms 0ms 1ms 0ms 0ms 1ms 0ms 1ms 1ms 
+0ms 1ms 0ms 1ms 1ms 0ms 1ms 0ms 1ms 1ms 0ms 1ms 1ms 0ms 
+1ms 0ms 1ms 1ms 0ms 1ms 1ms 0ms 1ms 0ms 1ms 1ms 0ms 1ms 
+0ms 1ms 1ms 0ms 1ms 0ms 1ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 
+1ms 0ms 1ms 0ms 1ms 1ms 0ms 1ms 0ms 1ms 1ms 0ms 1ms 0ms 
+1ms 0ms 0ms 1ms 0ms 1ms 0ms 0ms 1ms 0ms 1ms 0ms 1ms 1ms 
+0ms 1ms 0ms 1ms 1ms 0ms 1ms 0ms 1ms 1ms 0ms 1ms 0ms 1ms 
+14threads took execution time of 113ms
+matrix size 500, 500 multiplication sum 125231132
+
+1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 0ms 0ms 
+0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 0ms 
+0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 0ms 
+0ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 
+1ms 0ms 0ms 0ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 0ms 0ms 0ms 
+1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 0ms 1ms 0ms 1ms 0ms 1ms 
+0ms 1ms 0ms 1ms 0ms 1ms 0ms 0ms 0ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 
+1ms 0ms 1ms 0ms 1ms 0ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 
+0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 0ms 0ms 0ms 1ms 0ms 
+1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 0ms 1ms 0ms 1ms 
+0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 0ms 1ms 0ms 
+1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 0ms 0ms 
+0ms 0ms 0ms 0ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 
+0ms 1ms 0ms 1ms 0ms 0ms 0ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 
+1ms 0ms 1ms 1ms 0ms 1ms 0ms 1ms 0ms 0ms 0ms 1ms 0ms 1ms 0ms 1ms 
+0ms 1ms 0ms 0ms 0ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 1ms 0ms 
+16threads took execution time of 109ms
+matrix size 500, 500 multiplication sum 125231132
+
+0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 
+0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 
+0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 
+0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 
+1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 
+0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 
+1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 
+0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 
+1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 
+0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 
+0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 
+0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 
+0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 
+0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 
+0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 
+0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 1ms 0ms 0ms 0ms 0ms 0ms 0ms 
+0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 0ms 
+32threads took execution time of 85ms
+matrix size 500, 500 multiplication sum 125231132
+

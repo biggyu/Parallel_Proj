@@ -1,0 +1,65 @@
+Static Block Method
+1threads took execution time of 13ms
+1...199999prime# counter=17984
+2threads took execution time of 10ms
+1...199999prime# counter=17984
+4threads took execution time of 9ms
+1...199999prime# counter=17984
+6threads took execution time of 9ms
+1...199999prime# counter=17984
+8threads took execution time of 11ms
+1...199999prime# counter=17984
+10threads took execution time of 9ms
+1...199999prime# counter=17984
+12threads took execution time of 9ms
+1...199999prime# counter=17984
+14threads took execution time of 10ms
+1...199999prime# counter=17984
+16threads took execution time of 9ms
+1...199999prime# counter=17984
+32threads took execution time of 10ms
+1...199999prime# counter=17984
+
+Static Cyclic Method
+1threads took execution time of 15ms
+1...200000 prime# counter=17984
+2threads took execution time of 11ms
+1...200000 prime# counter=17984
+4threads took execution time of 10ms
+1...200000 prime# counter=17984
+6threads took execution time of 10ms
+1...200000 prime# counter=17984
+8threads took execution time of 10ms
+1...200000 prime# counter=17984
+10threads took execution time of 10ms
+1...200000 prime# counter=17984
+12threads took execution time of 10ms
+1...200000 prime# counter=17984
+14threads took execution time of 10ms
+1...200000 prime# counter=17984
+16threads took execution time of 10ms
+1...200000 prime# counter=17984
+32threads took execution time of 10ms
+1...200000 prime# counter=17984
+
+Dynamic Method
+1threads took execution time of 13ms
+1...200000 of tasks size 10 prime# counter=17984
+2threads took execution time of 10ms
+1...200000 of tasks size 10 prime# counter=17984
+4threads took execution time of 10ms
+1...200000 of tasks size 10 prime# counter=17984
+6threads took execution time of 9ms
+1...200000 of tasks size 10 prime# counter=17984
+8threads took execution time of 9ms
+1...200000 of tasks size 10 prime# counter=17984
+10threads took execution time of 9ms
+1...200000 of tasks size 10 prime# counter=17984
+12threads took execution time of 9ms
+1...200000 of tasks size 10 prime# counter=17984
+14threads took execution time of 10ms
+1...200000 of tasks size 10 prime# counter=17984
+16threads took execution time of 9ms
+1...200000 of tasks size 10 prime# counter=17984
+32threads took execution time of 9ms
+1...200000 of tasks size 10 prime# counter=17984
