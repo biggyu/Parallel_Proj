@@ -1,1 +1,1 @@
-# Parallel_Proj1
+# Parallel Programming Training Projects
