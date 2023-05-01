@@ -1,9 +1,9 @@
 import java.util.concurrent.BlockingQueue;
 
-public class Car extends Thread {
-    private BlockingQueue<Car> queue;
+public class BlockingQueueCar extends Thread {
+    private BlockingQueue<BlockingQueueCar> queue;
     private String name;
-    Car(String name, BlockingQueue<Car> queue) {
+    BlockingQueueCar(String name, BlockingQueue<BlockingQueueCar> queue) {
         super(name);
         this.queue = queue;
         start();
@@ -41,7 +41,7 @@ public class Car extends Thread {
                 aboutToLeave();
                 while (this.queue.take() == null);
                 justLeft();
-            } catch (InterruptedException e) {}
+            } catch (InterruptedException e) { }
         }
     }
 }

@@ -90,9 +90,9 @@ public class ParkingBlockingQueue {
 
 
 
-        BlockingQueue<Car> parkingGarage = new ArrayBlockingQueue<>(PARKING_SPACE);
-        for (int i=1; i<= 10; i++) {
-            Car c = new Car("Car "+i, parkingGarage);
+        BlockingQueue<BlockingQueueCar> parkingGarage = new ArrayBlockingQueue<>(PARKING_SPACE);
+        for (int i = 1; i <= 10; i++) {
+            BlockingQueueCar c = new BlockingQueueCar("Car " + i, parkingGarage);
         }
         System.out.println("Garage using ArrayBlockingQueue");
     }
