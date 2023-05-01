@@ -3,7 +3,7 @@ import java.util.concurrent.BlockingQueue;
 public class BlockingQueueCar extends Thread {
     private BlockingQueue<BlockingQueueCar> queue;
     private String name;
-    BlockingQueueCar(String name, BlockingQueue<BlockingQueueCar> queue) {
+    public BlockingQueueCar(String name, BlockingQueue<BlockingQueueCar> queue) {
         super(name);
         this.queue = queue;
         start();
