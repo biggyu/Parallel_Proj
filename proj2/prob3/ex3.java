@@ -24,22 +24,6 @@ class AtomicIntegerTemp extends Thread {
         start();
     }
 
-//    public void tryingCooling() {
-//        System.out.printf("%-7s: trying to cool\n", this.getName());
-//    }
-//
-//    public void finishCooling() {
-//        System.out.printf("%-7s: finished cooling\n", this.getName());
-//    }
-//
-//    public void tryingWarming() {
-//        System.out.printf("%-7s:\t\t\t\t trying to warm\n", this.getName());
-//    }
-//
-//    public void finishWarming() {
-//        System.out.printf("%-7s:\t\t\t\t finished warming\n", this.getName());
-//    }
-
     @Override
     public void run() {
         while (true) {
