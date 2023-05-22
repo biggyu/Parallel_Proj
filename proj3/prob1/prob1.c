@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <math.h>
-// #include <time.h>
 #include <string.h>
 #include <omp.h>
 const int NUM_END = 200000;
@@ -95,14 +94,14 @@ int main(int argc, char *argv[]) {
 			for(int j = 0; j < sizeof(thread_nums) / sizeof(thread_nums[0]); j++) {
 				values result = getPrime(i + 1, thread_nums[j]);
 				char tmp[20];
-				sprintf(tmp, "%.2f", result.exc_time);
+				sprintf(tmp, "%f", result.exc_time);
 				fprintf(fp, strcat(tmp, "ms,"));
 				printf("%d primes\n", result.total_prime);
 			}
 			fprintf(fp, "\n");
 		};
 	} else {
-		printf("prob1.c needs 2 input parameters: prob1 scheduling_type# #_of_thread\n");
+		printf("prob1.c needs 2 input parameters: ./a scheduling_type# #_of_thread\n");
 		printf("scheduling_type#:\n1:static w/ default chunk\n");
 		printf("2:dynamic w/ default chunk\n3:static w/ chunk 10\n4:dynamic w/ chunk 10\n");
 		printf("\n#_of_thread: 1, 2, 4, 6, 8, 10, 12, 14, 16");
