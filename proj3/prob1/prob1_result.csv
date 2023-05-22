@@ -1,0 +1,5 @@
+,chunk size,1,2,4,6,8,10,12,14,16,
+static,default,322ms,116ms,55ms,37ms,30ms,28ms,25ms,27ms,24ms,
+dynamic,default,293ms,70ms,32ms,26ms,23ms,19ms,23ms,22ms,20ms,
+static,10,284ms,151ms,85ms,49ms,51ms,40ms,35ms,38ms,37ms,
+dynamic,10,318ms,67ms,33ms,25ms,24ms,21ms,22ms,20ms,21ms,
