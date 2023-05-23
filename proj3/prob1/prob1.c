@@ -21,44 +21,27 @@ bool isPrime(int x) {
 values getPrime(int schedule_type, int thread_num) {
 	values v;
 	int sum = 0, i;
-	// printf("%d %d\n", schedule_type, thread_num);
 	double start_time = omp_get_wtime();
 #pragma omp parallel num_threads(thread_num)
 	if (schedule_type == 1) { // static w/ default chunk
-#pragma omp for private(i) schedule(static)
+#pragma omp for private(i) schedule(static) reduction(+:sum)
 		for (i = 0; i < NUM_END; i++) {
-			// printf("%d %d\n", omp_get_thread_num(), i);
-			if (isPrime(i + 1)) {
-#pragma omp critical
-				sum++;
-			}
+			if (isPrime(i + 1)) sum += 1;
 		}
 	} else if (schedule_type == 2) { // dynamic w/ defualt chunk
-#pragma omp for private(i) schedule(dynamic)
+#pragma omp for private(i) schedule(dynamic) reduction(+:sum)
 		for (i = 0; i < NUM_END; i++) {
-			// printf("%d %d\n", omp_get_thread_num(), i);
-			if (isPrime(i + 1))	{
-#pragma omp critical
-				sum++;
-			}
+			if (isPrime(i + 1))	sum += 1;
 		}
 	} else if (schedule_type == 3) { // static w/ chunk 10
-#pragma omp for private(i) schedule(static, 10)
+#pragma omp for private(i) schedule(static, 10) reduction(+:sum)
 		for (i = 0; i < NUM_END; i++) {
-			// printf("%d %d\n", omp_get_thread_num(), i);
-			if (isPrime(i + 1))	{
-#pragma omp critical
-				sum++;
-			}
+			if (isPrime(i + 1))	sum += 1;
 		}
 	} else if (schedule_type == 4) { // dynamic w/ chunk 10
-#pragma omp for private(i) schedule(dynamic, 10)
+#pragma omp for private(i) schedule(dynamic, 10) reduction(+:sum)
 		for (i = 0; i < NUM_END; i++) {
-			// printf("%d %d\n", omp_get_thread_num(), i);
-			if (isPrime(i + 1))	{
-#pragma omp critical
-				sum++;
-			}
+			if (isPrime(i + 1))	sum += 1;
 		}
 	}
 	double end_time = omp_get_wtime();
