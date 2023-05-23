@@ -15,25 +15,22 @@ values piCalc(int schedule_type, int chunk_size, int thread_num) {
 	double x, sum = 0, step = 1.0 / (double) NUM_STEPS, start_time = omp_get_wtime();
 #pragma omp parallel num_threads(thread_num)
 	if (schedule_type == 1) { // static
-#pragma omp for private(i, x) schedule(static, chunk_size)
+#pragma omp for private(i, x) schedule(static, chunk_size) reduction(+:sum)
 		for (i = 0; i < NUM_STEPS; i++) {
             x = (i + 0.5) * step;
-#pragma omp critical
-			sum = sum + 4.0 / (1.0 + x * x);
+			sum += 4.0 / (1.0 + x * x);
 		}
 	} else if (schedule_type == 2) { // dynamic
-#pragma omp for private(i) schedule(dynamic, chunk_size)
+#pragma omp for private(i) schedule(dynamic, chunk_size) reduction(+:sum)
 		for (i = 0; i < NUM_STEPS; i++) {
             x = (i + 0.5) * step;
-#pragma omp critical
-			sum = sum + 4.0 / (1.0 + x * x);
+			sum += 4.0 / (1.0 + x * x);
 		}
 	} else if (schedule_type == 3) { // guided
-#pragma omp for private(i) schedule(guided, chunk_size)
+#pragma omp for private(i) schedule(guided, chunk_size) reduction(+:sum)
 		for (i = 0; i < NUM_STEPS; i++) {
             x = (i + 0.5) * step;
-#pragma omp critical
-			sum = sum + 4.0 / (1.0 + x * x);
+			sum += 4.0 / (1.0 + x * x);
 		}
 	}
 	double end_time = omp_get_wtime();
@@ -48,7 +45,7 @@ int main(int argc, char *argv[]) {
 		printf("environment: %d threads, %s scheduling type, chunk size %d\n", thread_num, schedule_type == 1 ? "static" : schedule_type == 2 ? "dynamic" : "guided", chunk_size);
 		printf("pi=%.24lf in %fms\n", result.pi_value, result.exc_time);
 	} else if (argc == 1) {
-		int thread_nums[] = {1, 2, 4, 6, 8, 10, 12, 14, 16, 32, 64};
+		int thread_nums[] = {1, 2, 4, 6, 8, 10, 12, 14, 16};
         int chunk_nums[] = {1, 5, 10, 100};
         double pi_error[3 * (sizeof(chunk_nums) / sizeof(chunk_nums[0]))][sizeof(thread_nums) / sizeof(thread_nums[0])];
 		FILE *fp;
