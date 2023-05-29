@@ -52,17 +52,13 @@ values getPrime(int schedule_type, int thread_num) {
 int main(int argc, char *argv[]) {
 	if (argc == 3) {
 		int thread_num = atoi(argv[2]), schedule_type = atoi(argv[1]);
-		double start_time = omp_get_wtime();
 		values result = getPrime(schedule_type, thread_num);
-		double end_time = omp_get_wtime();
 		printf("%lfms time elapsed in %d thread w/ %s scheduling type chunk size %s\n", result.exc_time, thread_num,
 		schedule_type % 2 == 0 ? "dynamic" : "static", schedule_type < 3 ? "default" : "10");
 		printf("1... %d has %d prime #\n", NUM_END, result.total_prime);
-		// getPrime(atoi(argv[1]), atoi(argv[2]));
 	} else if(argc == 1) {
 		int thread_nums[] = {1, 2, 4, 6, 8, 10, 12, 14, 16, 32};
-		FILE *fp;
-		fp = fopen("prob1_result.csv", "w+");
+		FILE *fp = fopen("prob1_result.csv", "w+");
 		fprintf(fp, ",");
 		fprintf(fp, "chunk size,");
 		for (int i = 0; i < sizeof(thread_nums) / sizeof(thread_nums[0]); i++) {

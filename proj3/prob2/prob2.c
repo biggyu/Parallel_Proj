@@ -48,8 +48,7 @@ int main(int argc, char *argv[]) {
 		int thread_nums[] = {1, 2, 4, 6, 8, 10, 12, 14, 16};
         int chunk_nums[] = {1, 5, 10, 100};
         double pi_error[3 * (sizeof(chunk_nums) / sizeof(chunk_nums[0]))][sizeof(thread_nums) / sizeof(thread_nums[0])];
-		FILE *fp;
-		fp = fopen("prob2_result.csv", "w+");
+		FILE *fp = fopen("prob2_result.csv", "w+");
 		fprintf(fp, ",");
 		fprintf(fp, "chunk size,");
 		for (int i = 0; i < sizeof(thread_nums) / sizeof(thread_nums[0]); i++) {
@@ -94,25 +93,3 @@ int main(int argc, char *argv[]) {
 		printf("\n#_of_thread: 1, 2, 4, 6, 8, 10, 12, 14, 16");
     }
 }
-
-// #include <omp.h>
-// #include <stdio.h>
-// long num_steps = 10000000; 
-// double step;
-// int main(void) {
-// 	long i; double x, pi, sum = 0.0;
-// 	double start_time, end_time;
-
-// 	start_time = omp_get_wtime();
-// 	step = 1.0/(double) num_steps;
-// 	for (i=0;i< num_steps; i++){
-// 		x = (i+0.5)*step;
-// 		sum = sum + 4.0/(1.0+x*x);
-// 	}
-// 	pi = step * sum;
-// 	end_time = omp_get_wtime();
-// 	double timeDiff = end_time - start_time;
-//         printf("Execution Time : %lfms\n", timeDiff);
-
-// 	printf("pi=%.24lf\n",pi);
-// }
