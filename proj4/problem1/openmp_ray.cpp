@@ -10,7 +10,7 @@
 #define DIM 2048
 int thread_num;
 typedef struct Sphere {
-    float   r,b,g;
+    float   rgb[3];
     float   radius;
     float   x,y,z;
     float hit( float ox, float oy, float *n ) {
@@ -36,9 +36,9 @@ double openmp_ray(Sphere* s, unsigned char* ptr) {
 				float n, t = s[k].hit(ox, oy, &n);
 				if (t > maxz) {
 					float fscale = n;
-					rgb[0] = s[k].r * fscale;
-					rgb[1] = s[k].g * fscale;
-					rgb[2] = s[k].b * fscale;
+					for(int l = 0; l < 3; l++ ) {
+						rgb[l] = s[k].rgb[l] * fscale;
+					}
 					maxz = t;
 				}
 			}
@@ -71,9 +71,9 @@ int main(int argc, char *argv[]) {
 		Sphere *spheres = (Sphere *)malloc(sizeof(Sphere) * SPHERE_NUM);
 		srand((unsigned int)time(NULL));
 		for (int i = 0; i < SPHERE_NUM; i++) {
-			spheres[i].r = rnd(1.0f);
-			spheres[i].g = rnd(1.0f);
-			spheres[i].b = rnd(1.0f);
+			for(int j = 0; j < 3; j++) {
+				spheres[i].rgb[j] = rnd(1.0f);
+			}
 			spheres[i].x = rnd(2000.0f) - 1000;
 			spheres[i].y = rnd(2000.0f) - 1000;
 			spheres[i].z = rnd(2000.0f) - 1000;
@@ -83,9 +83,6 @@ int main(int argc, char *argv[]) {
 		
 		double exc_time = openmp_ray(spheres, bitmap);
 		
-		// for (int i = 0; i < DIM; i++)
-		// 	for (int j = 0; j < DIM; j++)
-		// 		kernel(x, y, temp_s, bitmap);
 		ppm_write(bitmap, DIM, DIM, rp);
 
 		fclose(rp);
@@ -100,9 +97,9 @@ int main(int argc, char *argv[]) {
 		int thread_nums[] = {1, 2, 4, 6, 8, 10, 12, 14, 16, 32, 64};
 		Sphere *spheres = (Sphere *)malloc(sizeof(Sphere) * SPHERE_NUM);
 		for (int i = 0; i < SPHERE_NUM; i++) {
-			spheres[i].r = rnd(1.0f);
-			spheres[i].g = rnd(1.0f);
-			spheres[i].b = rnd(1.0f);
+			for(int j = 0; j < 3; j++) {
+				spheres[i].rgb[j] = rnd(1.0f);
+			}
 			spheres[i].x = rnd(2000.0f) - 1000;
 			spheres[i].y = rnd(2000.0f) - 1000;
 			spheres[i].z = rnd(2000.0f) - 1000;
@@ -140,7 +137,6 @@ int main(int argc, char *argv[]) {
 		free(spheres);
 	}
 }
-
 
 //g++ -fopenmp -o openmp_ray openmp_ray.cpp
 //./openmp_ray 4
