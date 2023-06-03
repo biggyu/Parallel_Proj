@@ -67,7 +67,8 @@ void ppm_write(unsigned char* bitmap, int xdim,int ydim, FILE* fp) {
 int main(int argc, char *argv[]) {
 	if (argc == 2) {
 		thread_num = atoi(argv[1]);
-		FILE* rp = fopen("result_openmp.ppm", "w");
+		char file_name[20] = "result_openmp.ppm";
+		FILE* rp = fopen(file_name, "w");
 		Sphere *spheres = (Sphere *)malloc(sizeof(Sphere) * SPHERE_NUM);
 		srand((unsigned int)time(NULL));
 		for (int i = 0; i < SPHERE_NUM; i++) {
@@ -89,8 +90,8 @@ int main(int argc, char *argv[]) {
 		free(bitmap);
 		free(spheres);
 
-		printf("Openmp (%d threads) ray tracing: %lf sec\n", thread_num, exc_time);
-		printf("[openmp_result.ppm] generated\n");
+		printf("OpenMP (%d threads) ray tracing: %lf sec\n", thread_num, exc_time);
+		printf("[%s] generated\n", file_name);
 	} else {
 		// printf("prob1.c needs 1 input parameter: ./a #_of_thread\n");
 		// printf("\n#_of_thread: 1, 2, 4, 6, 8, 10, 12, 14, 16, 32\n");

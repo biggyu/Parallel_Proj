@@ -168,7 +168,8 @@ void ppm_write(unsigned char* bitmap, int xdim,int ydim, FILE* fp) {
 int main(void) {
     unsigned int sph_size = 4 * sizeof(Sphere) * SPHERE_NUM, bmp_size = 4 * sizeof(unsigned char) * DIM * DIM * 4;
 	unsigned char* bitmap = (unsigned char *) malloc(bmp_size), *d_bitmap;
-    FILE* rp = fopen("result_cuda.ppm", "w");
+	char file_name[20] = "result_cuda.ppm";
+    FILE* rp = fopen(file_name, "w");
 	Sphere *spheres = (Sphere *)malloc(sph_size), *d_spheres;
 	srand((unsigned int)time(NULL));
 	for (int i = 0; i < SPHERE_NUM; i++) {
@@ -212,6 +213,7 @@ int main(void) {
 	fclose(rp);
 	free(bitmap); free(spheres);
     cudaFree(d_bitmap); cudaFree(d_spheres);
-    printf("%lfsec\n",  (double)excTime / 1000.0);
+    printf("CUDA ray tracing: %lfsec\n",  (double)excTime / 1000.0);
+	printf("[%s] generated\n", file_name);
     return 0;
 }
