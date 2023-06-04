@@ -4,8 +4,7 @@
 long num_steps = 1000000000; 
 double step;
 
-void main ()
-{ 
+int main () { 
 	long i; double x, pi, sum = 0.0;
 	double start_time, end_time;
 

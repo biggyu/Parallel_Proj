@@ -8,22 +8,17 @@
 template <typename T>
 struct square {
 
-    double num_step = 1 << 30;
+    int num_step = 1 << 30;
 
     __host__ __device__
     double operator()(const T& x) const {
-        // printf("%f\n", 4 / pow(x, 2));
-        double sum = 0;
-        for(int i = 0; i < 4; i++ ) {
-            double step = 1.0 / num_step;
-            sum += 4.0 / (1 + pow(((x + i * (1 << 28)) + 0.5) * step, 2));
-        }
-        return sum;
+        double step = 1.0 / num_step;
+        return 4.0 / (1 + pow((x + 0.5) * step, 2));
     }
 };
 int main () {
-    long num_step = 1 << 28;
-    thrust::device_vector<long> X(num_step);
+    int num_step = 1 << 30;
+    thrust::device_vector<int> X(num_step);
 
     square<double>         unary_op;
     thrust::plus<double>   binary_op;
@@ -31,8 +26,8 @@ int main () {
     thrust::sequence(X.begin(), X.end());
     clock_t start_time = clock();
     double result = thrust::transform_reduce(X.begin(), X.end(), unary_op, (double) 0, binary_op);
-    double exc_time = (double) clock() - start_time;
-    printf("%lf\n", result / (double) (num_step << 2));
+    double exc_time = (double) (clock() - start_time);
+    printf("%lf\n", result / (double) num_step);
     printf("execution time: %lf sec\n", exc_time / 1000.0);
 
     return 0;
